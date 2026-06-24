@@ -203,6 +203,7 @@ def setup_metadata():
         with open(dir_path + "/metadata_config/metadata_config.json") as metadata:
             oidc_metadata = json.load(metadata)
             oidc_metadata_clean = copy.deepcopy(oidc_metadata)
+            credential_request_encryption = None
 
         metadata_endpoint = f"{CONFIGURATION['backend_url']}/.well-known/openid-credential-issuer"
 
